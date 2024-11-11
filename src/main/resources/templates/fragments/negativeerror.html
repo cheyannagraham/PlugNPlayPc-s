@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Negative Error</title>
+    <meta http-equiv="refresh" content="3;URL='parts'">
+    <title>PNP: Delete Error</title>
+    <div th:insert="~{pages/mainscreen :: head}"></div>
 </head>
+
 <body>
-<p>Cannot delete a part used in a product</p>
-<a href="http://localhost:8080/">Link
-    to Main Screen</a>
+<div th:replace="~{pages/mainscreen :: header}"></div>
+
+<main class="container">
+    <p>Cannot delete a part used in a product</p>
+</main>
 </body>
 </html>
