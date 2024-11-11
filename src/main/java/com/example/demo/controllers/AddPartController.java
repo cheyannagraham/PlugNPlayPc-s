@@ -47,7 +47,7 @@ public class AddPartController {
             theModel.addAttribute("outsourcedpart",outsourcedPart);
             formtype="OutsourcedPartForm";
         }
-        return formtype;
+        return "forms/" + formtype;
     }
 
     @GetMapping("/deletepart")
@@ -56,10 +56,10 @@ public class AddPartController {
         Part part=repo.findById(theId);
         if(part.getProducts().isEmpty()){
             repo.deleteById(theId);
-            return "confirmationdeletepart";
+            return "fragments/confirmationdeletepart";
         }
         else{
-            return "negativeerror";
+            return "fragments/negativeerror";
         }
     }
 
