@@ -17,7 +17,6 @@ import java.util.List;
 public class PartsPageController {
 
     private PartService partService;
-    private ProductService productService;
 
     public PartsPageController(PartService partService){
         this.partService=partService;
