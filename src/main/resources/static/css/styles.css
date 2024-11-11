@@ -3,6 +3,7 @@
     --primary-color: #6E8898;
     --primary-text-color: #328070;
     --secondary-color:#E2C044;
+    --secondary-text-color: #ab0f0f;
     --dark-color: #2e5266;
     --light-color: #9fb1bc;
     --accent-color: #D3D0CB;
@@ -50,6 +51,10 @@ a {
 
 a:hover {
     text-decoration:underline;
+}
+
+h2 {
+    color: var(--secondary-text-color)
 }
 
 /* ____BS Styles-------------------------------------*/

@@ -29,14 +29,14 @@ public class AddInhousePartController{
     public String showFormAddInhousePart(Model theModel){
         InhousePart inhousepart=new InhousePart();
         theModel.addAttribute("inhousepart",inhousepart);
-        return "InhousePartForm";
+        return "forms/InhousePartForm";
     }
 
     @PostMapping("/showFormAddInPart")
     public String submitForm(@Valid @ModelAttribute("inhousepart") InhousePart part, BindingResult theBindingResult, Model theModel){
         theModel.addAttribute("inhousepart",part);
         if(theBindingResult.hasErrors()){
-            return "InhousePartForm";
+            return "forms/InhousePartForm";
         }
         else{
         InhousePartService repo=context.getBean(InhousePartServiceImpl.class);
@@ -44,7 +44,7 @@ public class AddInhousePartController{
         if(ip!=null)part.setProducts(ip.getProducts());
             repo.save(part);
 
-        return "confirmationaddpart";}
+        return "fragments/confirmationaddpart";}
     }
 
 }

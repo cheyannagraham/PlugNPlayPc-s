@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <meta http-equiv="refresh"
-          content="0;URL='mainscreen'">
-<!--    <meta charset="UTF-8">-->
-    <title>Title</title>
+    <meta http-equiv="refresh" content="3;URL='parts'">
+    <head th:insert="~{pages/mainscreen :: head}"></head>
 </head>
-<body>
-<h1>Your part has been added or updated</h1>
 
-<a href="http://localhost:8080/">Link
-  to Main Screen</a>
+<body>
+<div th:replace="~{pages/mainscreen :: header}"></div>
+
+<main class="container">
+    <p>Success! Your part has been added or updated</p>
+</main>
 </body>
 </html>

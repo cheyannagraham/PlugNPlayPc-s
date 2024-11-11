@@ -7,7 +7,7 @@
 <div th:replace="~{pages/mainscreen :: header}"></div>
 <main class="container">
 
-    <h1>Parts</h1>
+    <h2>Parts</h2>
     <form th:action="@{/mainscreen}">
         Filter: <input type="text" name="partkeyword" id="partkeyword" size="50" th:value="${partkeyword}" required/>
         &nbsp;
@@ -16,6 +16,8 @@
         <input type="button" value="Clear" id="btnClearPart" onclick="clearSearch()"/>
     </form>
     <br><br>
+    <hr>
+
     <a th:href="@{/showFormAddInPart}" class="btn btn-primary btn-sm mb-3">Add Inhouse Part</a>
     <a th:href="@{/showFormAddOutPart}" class="btn btn-primary btn-sm mb-3">Add Outsourced Part</a>
     <table class="table table-bordered table-striped">
