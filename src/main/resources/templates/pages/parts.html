@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{pages/mainscreen :: head}">
+<head>
+    <title>PNC: Parts</title>
+    <div th:replace="~{pages/mainscreen :: head}"></div>
 </head>
 
 <body>
@@ -8,11 +10,9 @@
 <main class="container">
 
     <h2>Parts</h2>
-    <form th:action="@{/mainscreen}">
+    <form th:action="@{/parts}">
         Filter: <input type="text" name="partkeyword" id="partkeyword" size="50" th:value="${partkeyword}" required/>
-        &nbsp;
         <input type="submit" value="Search"/>
-        &nbsp;
         <input type="button" value="Clear" id="btnClearPart" onclick="clearSearch()"/>
     </form>
     <br><br>
