@@ -2,8 +2,6 @@ package com.example.demo.controllers;
 
 import com.example.demo.domain.Part;
 import com.example.demo.domain.Product;
-import com.example.demo.repositories.PartRepository;
-import com.example.demo.repositories.ProductRepository;
 import com.example.demo.service.PartService;
 import com.example.demo.service.ProductService;
 import org.springframework.data.repository.query.Param;
@@ -28,8 +26,8 @@ public class MainScreenControllerr {
     private PartService partService;
     private ProductService productService;
 
-    private List<Part> theParts;
-    private List<Product> theProducts;
+//    private List<Part> theParts;
+//    private List<Product> theProducts;
 
  /*   public MainScreenControllerr(PartRepository partRepository, ProductRepository productRepository) {
         this.partRepository = partRepository;
@@ -50,6 +48,6 @@ public class MainScreenControllerr {
         List<Product> productList=productService.listAll(productkeyword);
         theModel.addAttribute("products", productList);
         theModel.addAttribute("productkeyword",productkeyword);
-        return "mainscreen";
+        return "pages/mainscreen";
     }
 }

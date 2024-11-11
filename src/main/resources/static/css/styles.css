@@ -1,0 +1,73 @@
+/* ---------Colors -------------------------------------*/
+:root {
+    --primary-color: #6E8898;
+    --primary-text-color: #328070;
+    --secondary-color:#E2C044;
+    --dark-color: #2e5266;
+    --light-color: #9fb1bc;
+    --accent-color: #D3D0CB;
+    --white-color: white;
+    --black-color: black;
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.secondary-color {
+    color: var(--secondary-color);
+}
+
+.accent-color {
+    color: var(--accent-color);
+}
+
+
+.dark-color {
+    color: var(--dark-color);
+}
+
+.light-color {
+    color: var(--light-color);
+}
+
+.primary-text-color{
+    color: var(--primary-text-color);
+}
+
+/* --------- -------------------------------------*/
+
+
+svg {
+    width: 100%;
+    height: 100%;
+    max-width: 75px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+/* ____BS Styles-------------------------------------*/
+.nav-link, .nav-item {
+    color: var(--dark-color);
+}
+
+.active{
+    color: var(--secondary-color)!important;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.btn {
+    background-color: var(--primary-color);
+}
+
+.btn:hover {
+    background-color: var(--light-color);
+}
+
