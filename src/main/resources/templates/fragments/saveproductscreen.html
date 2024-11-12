@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Save Product Screen</title>
+    <meta http-equiv="refresh" content="3;URL='showFormAddProduct'">
+    <title>PNC: Save Product</title>
+    <div th:insert="~{pages/mainscreen :: head}"></div>
 </head>
+
 <body>
-<p>Please save product before adding parts!</p>
-<a href="http://localhost:8080/">Link
-    to Main Screen</a>
+<div th:replace="~{pages/mainscreen :: header}"></div>
+
+<main class="container">
+    <p>Please save product before adding parts!</p>
+</main>
 </body>
 </html>

@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
 <head>
-<!--    <meta charset="UTF-8">-->
-    <meta http-equiv="refresh"
-          content="0;URL='mainscreen'">
-    <title>Title</title>
+    <meta http-equiv="refresh" content="3;URL='products'">
+    <title>PNC: Confirm Delete Product</title>
+    <div th:insert="~{pages/mainscreen :: head}"></div>
 </head>
-<body>
-<h1>Your product has been deleted</h1>
 
-<a href="http://localhost:8080/">Link
-    to Main Screen</a>
+<body>
+<div th:replace="~{pages/mainscreen :: header}"></div>
+
+<main class="container">
+<p>Your product has been deleted</p>
+</main>
+
 </body>
 </html>

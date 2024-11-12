@@ -67,7 +67,7 @@ public class AddProductController {
             }
             theModel.addAttribute("availparts",availParts);
             theModel.addAttribute("assparts",product2.getParts());
-            return "productForm";
+            return "forms/productForm";
         }
  //       theModel.addAttribute("assparts", assparts);
  //       this.product=product;
@@ -132,7 +132,7 @@ public class AddProductController {
     }
 // make the add and remove buttons work
 
-    @GetMapping("/associatepart")
+    @GetMapping("/associatepart") //doesnt seem to be used
     public String associatePart(@Valid @RequestParam("partID") int theID, Model theModel){
     //    theModel.addAttribute("product", product);
     //    Product product1=new Product();
