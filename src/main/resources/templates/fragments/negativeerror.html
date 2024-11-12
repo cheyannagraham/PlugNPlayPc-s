@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<div th:replace="~{pages/mainscreen :: header}"></div>
+<div th:replace="~{pages/mainscreen :: header(currentPage='parts')}"></div>
 
 <main class="container">
     <p>Cannot delete a part used in a product</p>
