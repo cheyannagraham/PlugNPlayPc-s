@@ -45,7 +45,7 @@ public class AddProductController {
         }
         theModel.addAttribute("availparts",availParts);
         theModel.addAttribute("assparts",product.getParts());
-        return "productForm";
+        return "forms/productForm";
     }
 
     @PostMapping("/showFormAddProduct")
@@ -89,7 +89,7 @@ public class AddProductController {
                 product.setInv(0);
             }
             repo.save(product);
-            return "confirmationaddproduct";
+            return "fragments/confirmationaddproduct";
         }
     }
 
@@ -109,7 +109,7 @@ public class AddProductController {
         }
         theModel.addAttribute("availparts",availParts);
         //send over to our form
-        return "productForm";
+        return "forms/productForm";
     }
 
     @GetMapping("/deleteproduct")
@@ -124,7 +124,7 @@ public class AddProductController {
         productService.save(product2);
         productService.deleteById(theId);
 
-        return "confirmationdeleteproduct";
+        return "fragments/confirmationdeleteproduct";
     }
 
     public AddProductController(PartService partService) {
@@ -137,7 +137,7 @@ public class AddProductController {
     //    theModel.addAttribute("product", product);
     //    Product product1=new Product();
         if (product1.getName()==null) {
-            return "saveproductscreen";
+            return "fragments/saveproductscreen";
         }
         else{
         product1.getParts().add(partService.findById(theID));
@@ -152,7 +152,7 @@ public class AddProductController {
             if(!product1.getParts().contains(p))availParts.add(p);
         }
         theModel.addAttribute("availparts",availParts);
-        return "productForm";}
+        return "forms/productForm";}
  //        return "confirmationassocpart";
     }
     @GetMapping("/removepart")
@@ -171,6 +171,6 @@ public class AddProductController {
             if(!product1.getParts().contains(p))availParts.add(p);
         }
         theModel.addAttribute("availparts",availParts);
-        return "productForm";
+        return "forms/productForm";
     }
 }
