@@ -132,7 +132,7 @@ public class AddProductController {
     }
 // make the add and remove buttons work
 
-    @GetMapping("/associatepart") //doesnt seem to be used
+    @GetMapping("/associatepart")
     public String associatePart(@Valid @RequestParam("partID") int theID, Model theModel){
     //    theModel.addAttribute("product", product);
     //    Product product1=new Product();
