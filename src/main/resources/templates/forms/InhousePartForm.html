@@ -27,6 +27,16 @@
                class="form-control mb-4 col-4"/>
         <p th:if="${#fields.hasErrors('inv')}" th:errors="*{inv}">Inventory Error</p>
 
+        <label for="min-part-inventory" class="form-label">Minimum Inventory</label>
+        <input id="min-part-inventory" type="text" path="minInv" th:field="*{minInv}" placeholder="0"
+               class="form-control mb-4 col-4"/>
+        <p th:if="${#fields.hasErrors('minInv')}" th:errors="*{minInv}">Minimum Inventory Error</p>
+
+        <label for="max-part-inventory" class="form-label">Maximum Inventory</label>
+        <input id="max-part-inventory" type="text" path="maxInv" th:field="*{maxInv}" placeholder="0"
+               class="form-control mb-4 col-4"/>
+        <p th:if="${#fields.hasErrors('maxInv')}" th:errors="*{maxInv}">Maximum Inventory Error</p>
+
         <label for="part-id" class="form-label">Part ID</label>
         <input id="part-id" type="text" th:field="*{partId}" placeholder="Part ID" class="form-control mb-4 col-4"/>
 
