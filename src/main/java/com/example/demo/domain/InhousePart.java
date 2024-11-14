@@ -17,8 +17,8 @@ public class InhousePart extends Part{
     public InhousePart() {
     }
 
-    public InhousePart(String name, double price, int inventory){
-        super(name, price, inventory);
+    public InhousePart(String name, double price, int inventory, int minInv, int maxInv) {
+        super(name, price, inventory, minInv, maxInv);
     }
 
     public int getPartId() {
