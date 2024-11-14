@@ -3,32 +3,46 @@
 COMPETENT
 A README file is created and includes notes accurately describing where in the code to find the changes made for each of the parts C to J. The notes include the prompt, file name, line number, and change.
 
-## C.  Customize the HTML user interface(Last) for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
-git commit
+## C.
+### Customize the HTML user interface(Last) for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
 Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.
 
 COMPETENT
 The HTML user interface is correctly customized for the customer’s application. The user interface includes the shop name, the product names, and the names of the parts.
 ### Shop Name
 #### File Name:
+mainscreen.html
 #### Line Number:
+16-54
 #### Change:
+add header element with shop name and navbar
 
 ### Product Names
 #### File Name:
+mainscreen.html
 #### Line Number:
+57-66
 #### Change:
+add section to show product info on main page
 
 ### Part Names
 #### File Name:
+mainscreen.html
 #### Line Number:
+67-76
 #### Change:
+add section to show part info on main page
+
+#### File Name:
+mainScreenController.java
+#### Line Number:
+45-47
+#### Change:
+add product and part names to interface model for display
 
 ---
-
-
-
-## D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
+## D. 
+### Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
 
 COMPETENT
 The “About” page added to the application accurately describes the chosen customer’s company to web viewers. The application includes navigation to and from the “About” page to the main screen and functions properly.

@@ -1,9 +1,13 @@
 package com.example.demo.controllers;
 
+import com.example.demo.domain.Product;
 import com.example.demo.service.PartService;
 import com.example.demo.service.ProductService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.List;
 
 /**
  *
@@ -31,14 +35,18 @@ public class MainScreenController {
     }
 
     @GetMapping({"/mainscreen", "/"})
-    public String checkInventory() {
+    public String checkInventory(Model model) {
         Long totalParts = partService.countAllParts();
         Long totalProducts = productService.countAllProducts();
         if (totalParts + totalProducts == 0) {
             partService.addSamplePartInventory();
             productService.addSampleProductInventory();
         }
-//    Model theModel, @Param("partkeyword") String partkeyword, @Param("productkeyword") String productkeyword){
+
+        model.addAttribute("parts",List.of("RAM","Graphics Card", "HDD", "Cooling"));
+        model.addAttribute("products",List.of("Microphone", "Headset", "PC","Webcam" ));
+
+//    , @Param("partkeyword") String partkeyword, @Param("productkeyword") String productkeyword){
 //        theModel.addAttribute("parts",partList);
 //        theModel.addAttribute("partkeyword",partkeyword);
 //        theModel.addAttribute("products",productService.findAll());
