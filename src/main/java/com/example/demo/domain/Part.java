@@ -1,5 +1,6 @@
 package com.example.demo.domain;
 
+import com.example.demo.validators.InventoryConstraint;
 import com.example.demo.validators.ValidDeletePart;
 
 import javax.persistence.*;
@@ -19,6 +20,7 @@ import java.util.Set;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="part_type",discriminatorType = DiscriminatorType.INTEGER)
 @Table(name="Parts")
+@InventoryConstraint()
 public abstract class Part implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,9 +28,14 @@ public abstract class Part implements Serializable {
     String name;
     @Min(value = 0, message = "Price value must be positive")
     double price;
+
     @Min(value = 0, message = "Inventory value must be positive")
     int inv;
+
+    @Min(value = 0, message = "Minimum Inventory value must be positive")
     int minInv;
+
+    @Min(value = 0, message = "Maximum Inventory value must be positive")
     int maxInv;
 
     @ManyToMany

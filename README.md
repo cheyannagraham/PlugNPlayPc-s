@@ -115,15 +115,64 @@ Create 'buyproduct' route to adjust inventory and confirm purchase
 ---
 ## G.  Modify the parts to track maximum and minimum inventory by doing the following:
 
-•  Add additional fields to the part entity for maximum and minimum inventory.
-•  Modify the sample inventory to include the maximum and minimum fields.
-•  Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values.
-•  Rename the file the persistent storage is saved to.
-•  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
+### Add additional fields to the part entity for maximum and minimum inventory.
+#### File Name:
+Part.java
+#### Line Number:
+35-49
+#### Change:
+add min & max fields
 
-COMPETENT
-The submission accurately modifies the parts to track maximum and minimum inventory. The modification of the parts includes each of the given parameters, and the modifications are fully functional.
+### Modify the sample inventory to include the maximum and minimum fields.
+#### File Name:
+PartServiceImpl.java
+#### Line Number:
+77-82
+#### Change:
+add min & max fields to sample inventory
 
+### Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values.
+#### File Name:
+InhousePartForm.html
+#### Line Number:
+30-39
+#### Change:
+add min & max input controls
+
+#### File Name:
+OuthousePartForm.html
+#### Line Number:
+28-36
+#### Change:
+add min & max input controls
+
+### Rename the file the persistent storage is saved to.
+#### File Name:
+application.properties
+#### Line Number:
+6
+#### Change:
+change db102 to db103
+
+### Modify the code to enforce that the inventory is between or at the minimum and maximum value.
+#### File Name:
+Part.java
+#### Line Number:
+23
+#### Change:
+add annotated constraint @InventoryConstraint
+
+#### File Name:
+InventoryValidator.java, InventoryConstraint.java
+#### Line Number:
+ALL
+#### Change:
+enforce min-max validation
+
+[//]: # (COMPETENT)
+[//]: # (The submission accurately modifies the parts to track maximum and minimum inventory. The modification of the parts includes each of the given parameters, and the modifications are fully functional.)
+
+---
 ## H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
 
 •  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
