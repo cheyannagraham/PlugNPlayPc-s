@@ -1,14 +1,11 @@
 # B.  Create a README file that includes notes describing where in the code to find the changes you made for each of parts C to J. Each note should include the prompt, file name, line number, and change.
+[//]: # (COMPETENT)
+[//]: # (A README file is created and includes notes accurately describing where in the code to find the changes made for each of the parts C to J. The notes include the prompt, file name, line number, and change.)
 
-COMPETENT
-A README file is created and includes notes accurately describing where in the code to find the changes made for each of the parts C to J. The notes include the prompt, file name, line number, and change.
-
+---
 ## C.
 ### Customize the HTML user interface(Last) for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
-Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.
 
-COMPETENT
-The HTML user interface is correctly customized for the customer’s application. The user interface includes the shop name, the product names, and the names of the parts.
 ### Shop Name
 #### File Name:
 mainscreen.html
@@ -40,12 +37,18 @@ mainScreenController.java
 #### Change:
 add product and part names to interface model for display
 
+[//]: # (Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.)
+
+[//]: # (COMPETENT)
+
+[//]: # (The HTML user interface is correctly customized for the customer’s application. The user interface includes the shop name, the product names, and the names of the parts.)
+
 ---
 ## D. 
 ### Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
+[//]: # (COMPETENT)
+[//]: # (The “About” page added to the application accurately describes the chosen customer’s company to web viewers. The application includes navigation to and from the “About” page to the main screen and functions properly.)
 
-COMPETENT
-The “About” page added to the application accurately describes the chosen customer’s company to web viewers. The application includes navigation to and from the “About” page to the main screen and functions properly.
 ---
 ## E:
 ### Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
@@ -80,19 +83,36 @@ MainScreenController.java
 #### Change:
 change 'listPartsandProducts()' to 'checkInventory()';
 
-Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
-COMPETENT
-The sample inventory is added to the application. The inventory is appropriate for the chosen store and includes five products and five parts. The inventory does not overwrite existing data in the database.
+[//]: # (Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.)
+[//]: # (COMPETENT)
+[//]: # (The sample inventory is added to the application. The inventory is appropriate for the chosen store and includes five products and five parts. The inventory does not overwrite existing data in the database.)
 
-## F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
+---
+## F:
+### Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
 
-•  The “Buy Now” button must be next to the buttons that update and delete products.
-•  The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
-•  Display a message that indicates the success or failure of a purchase.
+#### File Name:
+products.html
+#### Line Number:
+43
+#### Change:
+add buy now link
 
-COMPETENT
-The “Buy Now” button is added to the product list. The button meets each of the given parameters, and the button is fully functional.
+#### File Name:
+AddProductController.java
+#### Line Number:
+157-186
+#### Change:
+Create 'buyproduct' route to adjust inventory and confirm purchase
 
+[//]: # (•  The “Buy Now” button must be next to the buttons that update and delete products.)
+[//]: # (•  The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.)
+[//]: # (•  Display a message that indicates the success or failure of a purchase.)
+[//]: # ()
+[//]: # (COMPETENT)
+[//]: # (The “Buy Now” button is added to the product list. The button meets each of the given parameters, and the button is fully functional.)
+
+---
 ## G.  Modify the parts to track maximum and minimum inventory by doing the following:
 
 •  Add additional fields to the part entity for maximum and minimum inventory.
