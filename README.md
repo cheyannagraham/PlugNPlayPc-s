@@ -113,7 +113,8 @@ Create 'buyproduct' route to adjust inventory and confirm purchase
 [//]: # (The “Buy Now” button is added to the product list. The button meets each of the given parameters, and the button is fully functional.)
 
 ---
-## G.  Modify the parts to track maximum and minimum inventory by doing the following:
+## G:
+### Modify the parts to track maximum and minimum inventory by doing the following:
 
 ### Add additional fields to the part entity for maximum and minimum inventory.
 #### File Name:
@@ -218,13 +219,28 @@ enforce min-max validation
 [//]: # (Validation is added for between or at the maximum and minimum fields. The validation includes each of the given parameters and the appropriate error messages. The validation is fully functional.)
 
 ---
-## I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
+## I:
+### Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 #### File Name:
+PartTest.java
 #### Line Number:
+160-175
 #### Change:
-COMPETENT
-At least two functional unit tests are added for the maximum and minimum fields. Both unit tests are added to the PartTest class in the test package.
+add  tests 'setMinInv' and 'setMaxInv'
 
+<br>
+
+#### File Name:
+InventoryValidatorTest.java
+#### Line Number:
+ALL
+#### Change:
+add  tests 'testInventoryInvalidAboveMax', 'testInventoryInvalidBelowMin', 'testInventoryBetweenMinimumAndmaximum'
+
+[//]: # (COMPETENT)
+[//]: # (At least two functional unit tests are added for the maximum and minimum fields. Both unit tests are added to the PartTest class in the test package.)
+
+---
 ## J.  Remove the class files for any unused validators in order to clean your code.
 
 COMPETENT
