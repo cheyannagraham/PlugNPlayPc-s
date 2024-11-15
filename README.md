@@ -173,17 +173,55 @@ enforce min-max validation
 [//]: # (The submission accurately modifies the parts to track maximum and minimum inventory. The modification of the parts includes each of the given parameters, and the modifications are fully functional.)
 
 ---
-## H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
+## H:
+### Add validation for between or at the maximum and minimum fields. The validation must include the following:
+#### Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
+#### File Name:
+Part.java
+#### Line Number:
+23
+#### Change:
+add annotated constraint @InventoryConstraint
 
-•  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
-•  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
-•  Display error messages when adding and updating parts if the inventory is greater than the maximum.
+<br>
 
-COMPETENT
-Validation is added for between or at the maximum and minimum fields. The validation includes each of the given parameters and the appropriate error messages. The validation is fully functional.
+#### Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
+#### File Name:
+EnufPartsValidator.java
+#### Line Number:
+29-39
+#### Change:
+change condition to ensure product update doesnt lower parts below minInv instead of partInv
 
+<br>
+
+#### Display error messages when adding and updating parts if the inventory is greater than the maximum.
+#### File Name:
+Part.java
+#### Line Number:
+23
+#### Change:
+add annotated constraint @InventoryConstraint
+
+<br>
+
+#### File Name:
+InventoryValidator.java, InventoryConstraint.java
+#### Line Number:
+ALL
+#### Change:
+enforce min-max validation
+
+<br>
+
+[//]: # (COMPETENT)
+[//]: # (Validation is added for between or at the maximum and minimum fields. The validation includes each of the given parameters and the appropriate error messages. The validation is fully functional.)
+
+---
 ## I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
-
+#### File Name:
+#### Line Number:
+#### Change:
 COMPETENT
 At least two functional unit tests are added for the maximum and minimum fields. Both unit tests are added to the PartTest class in the test package.
 
