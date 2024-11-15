@@ -1,10 +1,8 @@
-# B.  Create a README file that includes notes describing where in the code to find the changes you made for each of parts C to J. Each note should include the prompt, file name, line number, and change.
-[//]: # (COMPETENT)
-[//]: # (A README file is created and includes notes accurately describing where in the code to find the changes made for each of the parts C to J. The notes include the prompt, file name, line number, and change.)
 
 ---
+
 ## C.
-### Customize the HTML user interface(Last) for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
+### Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
 
 ### Shop Name
 #### File Name:
@@ -14,13 +12,17 @@ home.html
 #### Change:
 add header element with shop name and navbar
 
+<br>
+
 ### Product Names
 #### File Name:
 home.html
 #### Line Number:
-57-66
+57-77
 #### Change:
 add section to show product info on main page
+
+<br>
 
 ### Part Names
 #### File Name:
@@ -30,16 +32,14 @@ home.html
 #### Change:
 add section to show part info on main page
 
+<br>
+
 #### File Name:
 homeController.java
 #### Line Number:
-45-47
+35-36
 #### Change:
 add product and part names to interface model for display
-
-[//]: # (Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.)
-[//]: # (COMPETENT)
-[//]: # (The HTML user interface is correctly customized for the customer’s application. The user interface includes the shop name, the product names, and the names of the parts.)
 
 ---
 ## D:
@@ -58,10 +58,7 @@ about.html
 #### Line Number:
 ALL
 #### Change:
-about page
-
-[//]: # (COMPETENT)
-[//]: # (The “About” page added to the application accurately describes the chosen customer’s company to web viewers. The application includes navigation to and from the “About” page to the main screen and functions properly.)
+create about page.html
 
 ---
 ## E:
@@ -69,39 +66,48 @@ about page
 #### File Name:
 ProductService.java
 #### Line Number:
-20-23
+20-21
 #### Change: 
 Add 'countAllProducts()' and 'addSampleProductInventory()' method declarations;
+
+<br>
+
 #### File Name:
 PartService.java
 #### Line Number:
-20-23
+20-21
 #### Change:
 Add 'countAllParts()' and 'addSamplePartInventory()' method declarations;
+
+<br>
+
 #### File Name:
 ProductServiceImpl.java
 #### Line Number:
-66 - 82
+64 - 79
 #### Change:
 Implement 'countAllProducts()' and 'addSampleProductInventory()'
+
+<br>
+
 #### File Name:
 PartServiceImpl.java
 #### Line Number:
-69 - 82
+67 - 82
 #### Change:
 Implement 'countAllParts()' and 'addSamplePartInventory()'
+
+<br>
+
 #### File Name:
 homeController.java
 #### Line Number:
-34-40
+25-32
 #### Change:
 change 'listPartsandProducts()' to 'checkInventory()';
 
-[//]: # (Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.)
-[//]: # (COMPETENT)
-[//]: # (The sample inventory is added to the application. The inventory is appropriate for the chosen store and includes five products and five parts. The inventory does not overwrite existing data in the database.)
-
 ---
+
 ## F:
 ### Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
 
@@ -112,19 +118,14 @@ products.html
 #### Change:
 add buy now link
 
+<br>
+
 #### File Name:
 AddProductController.java
 #### Line Number:
-157-186
+166-175
 #### Change:
 Create 'buyproduct' route to adjust inventory and confirm purchase
-
-[//]: # (•  The “Buy Now” button must be next to the buttons that update and delete products.)
-[//]: # (•  The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.)
-[//]: # (•  Display a message that indicates the success or failure of a purchase.)
-[//]: # ()
-[//]: # (COMPETENT)
-[//]: # (The “Buy Now” button is added to the product list. The button meets each of the given parameters, and the button is fully functional.)
 
 ---
 ## G:
@@ -134,17 +135,21 @@ Create 'buyproduct' route to adjust inventory and confirm purchase
 #### File Name:
 Part.java
 #### Line Number:
-35-49
+33-38
 #### Change:
 add min & max fields
+
+<br>
 
 ### Modify the sample inventory to include the maximum and minimum fields.
 #### File Name:
 PartServiceImpl.java
 #### Line Number:
-77-82
+72-82
 #### Change:
 add min & max fields to sample inventory
+
+<br>
 
 ### Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values.
 #### File Name:
@@ -154,12 +159,16 @@ InhousePartForm.html
 #### Change:
 add min & max input controls
 
+<br>
+
 #### File Name:
-OuthousePartForm.html
+OutsourcePartForm.html
 #### Line Number:
 28-36
 #### Change:
 add min & max input controls
+
+<br>
 
 ### Rename the file the persistent storage is saved to.
 #### File Name:
@@ -169,13 +178,17 @@ application.properties
 #### Change:
 change db102 to db103
 
+<br>
+
 ### Modify the code to enforce that the inventory is between or at the minimum and maximum value.
 #### File Name:
 Part.java
 #### Line Number:
-23
+21
 #### Change:
 add annotated constraint @InventoryConstraint
+
+<br>
 
 #### File Name:
 InventoryValidator.java, InventoryConstraint.java
@@ -183,9 +196,6 @@ InventoryValidator.java, InventoryConstraint.java
 ALL
 #### Change:
 enforce min-max validation
-
-[//]: # (COMPETENT)
-[//]: # (The submission accurately modifies the parts to track maximum and minimum inventory. The modification of the parts includes each of the given parameters, and the modifications are fully functional.)
 
 ---
 ## H:
@@ -204,7 +214,7 @@ add annotated constraint @InventoryConstraint
 #### File Name:
 EnufPartsValidator.java
 #### Line Number:
-29-39
+33,35,36-38
 #### Change:
 change condition to ensure product update doesnt lower parts below minInv instead of partInv
 
@@ -227,11 +237,6 @@ ALL
 #### Change:
 enforce min-max validation
 
-<br>
-
-[//]: # (COMPETENT)
-[//]: # (Validation is added for between or at the maximum and minimum fields. The validation includes each of the given parameters and the appropriate error messages. The validation is fully functional.)
-
 ---
 ## I:
 ### Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
@@ -251,9 +256,6 @@ ALL
 #### Change:
 add  tests 'testInventoryInvalidAboveMax', 'testInventoryInvalidBelowMin', 'testInventoryBetweenMinimumAndmaximum'
 
-[//]: # (COMPETENT)
-[//]: # (At least two functional unit tests are added for the maximum and minimum fields. Both unit tests are added to the PartTest class in the test package.)
-
 ---
 ## J:
 ### Remove the class files for any unused validators in order to clean your code.
@@ -264,6 +266,3 @@ ValidDeletePart.java
 #### Change:
 removed unused validators
 
-[//]: # (COMPETENT)
-[//]: # (The submission removes the class files for any unused validators to clean the code.)
----
