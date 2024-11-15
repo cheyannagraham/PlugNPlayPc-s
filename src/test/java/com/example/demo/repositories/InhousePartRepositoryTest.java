@@ -1,7 +1,6 @@
 package com.example.demo.repositories;
 
 import com.example.demo.domain.InhousePart;
-import com.example.demo.service.PartServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -35,7 +34,7 @@ class InhousePartRepositoryTest {
         List partData=new ArrayList();
         partData.add(part);
         when(inhousePartRepository.findAll()).thenReturn(partData);
-        List<InhousePart> parts=(List<InhousePart>)inhousePartRepository.findAll();
+        inhousePartRepository.findAll();
         assertEquals(partData.size(),1);
     }
 }

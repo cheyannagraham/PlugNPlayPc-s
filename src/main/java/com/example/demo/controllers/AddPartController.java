@@ -27,14 +27,17 @@ public class AddPartController {
     @GetMapping("/showPartFormForUpdate")
     public String showPartFormForUpdate(@RequestParam("partID") int theId,Model theModel){
 
-        PartService repo=context.getBean(PartServiceImpl.class);
+        context.getBean(PartServiceImpl.class);
         OutsourcedPartService outsourcedrepo=context.getBean(OutsourcedPartServiceImpl.class);
         InhousePartService inhouserepo=context.getBean(InhousePartServiceImpl.class);
 
         boolean inhouse=true;
         List<OutsourcedPart> outsourcedParts=outsourcedrepo.findAll();
         for(OutsourcedPart outsourcedPart:outsourcedParts) {
-            if(outsourcedPart.getId()==theId)inhouse=false;
+            if (outsourcedPart.getId() == theId) {
+                inhouse = false;
+                break;
+            }
         }
         String formtype;
         if(inhouse){

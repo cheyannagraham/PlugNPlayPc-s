@@ -5,17 +5,15 @@ import com.example.demo.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 /**
  *
  */
 @Service
 public class ProductServiceImpl implements ProductService {
-    private ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
     @Autowired
     public ProductServiceImpl(ProductRepository productRepository) {

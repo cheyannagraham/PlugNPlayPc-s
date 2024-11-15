@@ -14,8 +14,8 @@ import java.util.List;
 
 @Controller
 public class HomeController {
-    private PartService partService;
-    private ProductService productService;
+    private final PartService partService;
+    private final ProductService productService;
 
     public HomeController(PartService partService, ProductService productService) {
         this.partService = partService;

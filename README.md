@@ -255,7 +255,15 @@ add  tests 'testInventoryInvalidAboveMax', 'testInventoryInvalidBelowMin', 'test
 [//]: # (At least two functional unit tests are added for the maximum and minimum fields. Both unit tests are added to the PartTest class in the test package.)
 
 ---
-## J.  Remove the class files for any unused validators in order to clean your code.
+## J:
+### Remove the class files for any unused validators in order to clean your code.
 
-COMPETENT
-The submission removes the class files for any unused validators to clean the code.
+#### File Name:
+DeletePartValidator.java
+ValidDeletePart.java
+#### Change:
+removed unused validators
+
+[//]: # (COMPETENT)
+[//]: # (The submission removes the class files for any unused validators to clean the code.)
+---

@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping
 public class PartsPageController {
 
-    private PartService partService;
+    private final PartService partService;
 
     public PartsPageController(PartService partService){
         this.partService=partService;

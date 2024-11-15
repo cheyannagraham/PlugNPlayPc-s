@@ -24,8 +24,7 @@ import java.util.List;
 public class AddProductController {
     @Autowired
     private ApplicationContext context;
-    private PartService partService;
-    private List<Part> theParts;
+    private final PartService partService;
     private static Product product1;
     private Product product;
     @Autowired
@@ -67,11 +66,7 @@ public class AddProductController {
             theModel.addAttribute("availparts", availParts);
             theModel.addAttribute("assparts", product2.getParts());
             return "forms/productForm";
-        }
-        //       theModel.addAttribute("assparts", assparts);
-        //       this.product=product;
-//        product.getParts().addAll(assparts);
-        else {
+        } else {
             ProductService repo = context.getBean(ProductServiceImpl.class);
             if (product.getId() != 0) {
                 Product product2 = repo.findById((int) product.getId());
@@ -97,7 +92,6 @@ public class AddProductController {
         ProductService repo = context.getBean(ProductServiceImpl.class);
         Product theProduct = repo.findById(theId);
         product1 = theProduct;
-        //    this.product=product;
         //set the employ as a model attibute to prepopulate the form
         theModel.addAttribute("product", theProduct);
         theModel.addAttribute("assparts", theProduct.getParts());
@@ -128,12 +122,9 @@ public class AddProductController {
     public AddProductController(PartService partService) {
         this.partService = partService;
     }
-// make the add and remove buttons work
 
     @GetMapping("/associatepart")
     public String associatePart(@Valid @RequestParam("partID") int theID, Model theModel) {
-        //    theModel.addAttribute("product", product);
-        //    Product product1=new Product();
         if (product1.getName() == null) {
             return "fragments/saveproductscreen";
         } else {
@@ -151,7 +142,6 @@ public class AddProductController {
             theModel.addAttribute("availparts", availParts);
             return "forms/productForm";
         }
-        //        return "confirmationassocpart";
     }
 
     @GetMapping("/removepart")

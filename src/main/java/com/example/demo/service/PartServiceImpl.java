@@ -2,12 +2,10 @@ package com.example.demo.service;
 
 import com.example.demo.domain.InhousePart;
 import com.example.demo.domain.Part;
-import com.example.demo.domain.Product;
 import com.example.demo.repositories.PartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,7 +15,7 @@ import java.util.Optional;
 
 @Service
 public class PartServiceImpl implements PartService {
-    private PartRepository partRepository;
+    private final PartRepository partRepository;
 
     @Autowired
 
