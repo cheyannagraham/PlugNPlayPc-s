@@ -68,6 +68,11 @@ section a {
     max-width: 100%;
 
 }
+
+footer {
+    color: var(--dark-color);
+    font-size: .8rem;
+}
 /* ____BS Styles-------------------------------------*/
 .nav-link, .nav-item {
     color: var(--dark-color);
