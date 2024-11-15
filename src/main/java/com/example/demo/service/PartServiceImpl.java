@@ -72,12 +72,12 @@ public class PartServiceImpl implements PartService {
     @Override
     public void addSamplePartInventory(){
         partRepository.saveAll(List.of(
-                new InhousePart("RAM 32GB DDR5 (2 x 16GB)", 125.00,8,5,10),
-                new InhousePart("GBIT AirPower 12G GDDR6 Graphics Card", 659.99,5,3,10),
-                new InhousePart("Seabridge 10TB 7200RPM SATA 6.0/Gbs 3.5\" Hard Disk Drive", 164.45, 9,3,10),
-                new InhousePart("Ssing 2TB SSD M.2 Solid State Drive", 199.99, 11,5,15),
-                new InhousePart("Breeze 80 PLUS GOLD ATX 3.0 750W Power Supply",125.95,7,3,8),
-                new InhousePart("Breeze H150i AF120 RGB 360mm Radiator Liquid CPU Cooler", 179.99, 8,3,9)
+                new InhousePart("RAM 32GB DDR5 (2 x 16GB)", 125.00,8,1,10),
+                new InhousePart("GBIT AirPower 12G GDDR6 Graphics Card", 659.99,5,1,10),
+                new InhousePart("Seabridge 10TB 7200RPM SATA 6.0/Gbs 3.5\" Hard Disk Drive", 164.45, 9,1,10),
+                new InhousePart("Ssing 2TB SSD M.2 Solid State Drive", 199.99, 11,1,15),
+                new InhousePart("Breeze 80 PLUS GOLD ATX 3.0 750W Power Supply",125.95,7,1,8),
+                new InhousePart("Breeze H150i AF120 RGB 360mm Radiator Liquid CPU Cooler", 179.99, 8,1,9)
         ));
     }
 
