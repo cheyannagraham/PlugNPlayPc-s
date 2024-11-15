@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{pages/home :: head(title='About PNP')}">
+</head>
+
+<body>
+<div th:replace="~{pages/home :: header(currentPage='about')}"></div>
+<main class="container text-center">
+
+    <h2>About PNP</h2>
+    <img class="hero m-3 p-3" th:src="@{/images/about.jpg}" alt="person removing parts from desktop tower">
+    <p class="fs-4 m-3 p-3 primary-text-color">
+        Welcome fellow Gamer, Tinkerer, and Hobbyist!
+    </p>
+    <p class="fs-5 m-3 p-3">
+        We at PNP have all your pc needs covered! Whether you want to custom build your perfect gaming desktop, upgrade
+        a specific part, or you're looking for a prebuilt solution, we know we will have something for you!
+    </p>
+</main>
+</body>
+</html>

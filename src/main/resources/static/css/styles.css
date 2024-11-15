@@ -64,6 +64,10 @@ section a {
     color: var(--primary-text-color);
 }
 
+.hero {
+    max-width: 100%;
+
+}
 /* ____BS Styles-------------------------------------*/
 .nav-link, .nav-item {
     color: var(--dark-color);

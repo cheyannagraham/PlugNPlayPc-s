@@ -38,14 +38,28 @@ homeController.java
 add product and part names to interface model for display
 
 [//]: # (Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.)
-
 [//]: # (COMPETENT)
-
 [//]: # (The HTML user interface is correctly customized for the customer’s application. The user interface includes the shop name, the product names, and the names of the parts.)
 
 ---
-## D. 
+## D:
 ### Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
+#### File Name:
+AboutPageController.java
+#### Line Number:
+ALL
+#### Change:
+create route to about page
+
+<br>
+
+#### File Name:
+about.html
+#### Line Number:
+ALL
+#### Change:
+about page
+
 [//]: # (COMPETENT)
 [//]: # (The “About” page added to the application accurately describes the chosen customer’s company to web viewers. The application includes navigation to and from the “About” page to the main screen and functions properly.)
 
