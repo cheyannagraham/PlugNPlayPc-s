@@ -3,38 +3,11 @@
     --primary-color: #6E8898;
     --primary-text-color: #328070;
     --secondary-color: #E2C044;
-    --secondary-text-color: #ab0f0f;
+    --error-text-color: #ab0f0f;
+    --secondary-text-color: #e06404;
     --dark-color: #2e5266;
-    --light-color: #9fb1bc;
-    --accent-color: #D3D0CB;
-    --white-color: white;
-    --black-color: black;
 }
 
-.primary-color {
-    color: var(--primary-color);
-}
-
-.secondary-color {
-    color: var(--secondary-color);
-}
-
-.accent-color {
-    color: var(--accent-color);
-}
-
-
-.dark-color {
-    color: var(--dark-color);
-}
-
-.light-color {
-    color: var(--light-color);
-}
-
-.primary-text-color {
-    color: var(--primary-text-color);
-}
 
 /* --------- -------------------------------------*/
 
@@ -73,7 +46,25 @@ footer {
     color: var(--dark-color);
     font-size: .8rem;
 }
+
+.error {
+    color: var(--error-text-color);
+    font-weight:bold;
+}
+
 /* ____BS Styles-------------------------------------*/
+.primary-color {
+    color: var(--primary-color);
+}
+
+.secondary-color {
+    color: var(--secondary-color);
+}
+
+.primary-text-color {
+    color: var(--primary-text-color);
+}
+
 .nav-link, .nav-item {
     color: var(--dark-color);
 }
@@ -89,7 +80,7 @@ footer {
 }
 
 .btn:hover {
-    background-color: var(--light-color);
+    background-color: var(--secondary-color);
 }
 
 .img-fluid {
