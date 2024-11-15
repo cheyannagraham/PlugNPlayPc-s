@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
-    <meta http-equiv="refresh" content="2;URL='parts'" th:insert="~{pages/mainscreen :: head(title='PNP: Delete Error')}">
+    <meta http-equiv="refresh" content="2;URL='parts'" th:insert="~{pages/home :: head(title='PNP: Delete Error')}">
 </head>
 
 <body>
-<div th:replace="~{pages/mainscreen :: header(currentPage='parts')}"></div>
+<div th:replace="~{pages/home :: header(currentPage='parts')}"></div>
 
 <main class="container">
     <p>Cannot delete a part used in a product</p>

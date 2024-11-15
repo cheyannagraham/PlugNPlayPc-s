@@ -2,11 +2,11 @@
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta http-equiv="refresh" content="2;URL='products'"
-          th:insert="~{pages/mainscreen :: head(title='PNP: Confirm Add Product')}">
+          th:insert="~{pages/home :: head(title='PNP: Confirm Add Product')}">
 </head>
 
 <body>
-<div th:replace="~{pages/mainscreen :: header(currentPage='products')}"></div>
+<div th:replace="~{pages/home :: header(currentPage='products')}"></div>
 
 <main class="container">
     <p>Your product has been added or updated</p>

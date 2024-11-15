@@ -8,7 +8,7 @@
 
 ### Shop Name
 #### File Name:
-mainscreen.html
+home.html
 #### Line Number:
 16-54
 #### Change:
@@ -16,7 +16,7 @@ add header element with shop name and navbar
 
 ### Product Names
 #### File Name:
-mainscreen.html
+home.html
 #### Line Number:
 57-66
 #### Change:
@@ -24,14 +24,14 @@ add section to show product info on main page
 
 ### Part Names
 #### File Name:
-mainscreen.html
+home.html
 #### Line Number:
 67-76
 #### Change:
 add section to show part info on main page
 
 #### File Name:
-mainScreenController.java
+homeController.java
 #### Line Number:
 45-47
 #### Change:
@@ -77,7 +77,7 @@ PartServiceImpl.java
 #### Change:
 Implement 'countAllParts()' and 'addSamplePartInventory()'
 #### File Name:
-MainScreenController.java
+homeController.java
 #### Line Number:
 34-40
 #### Change:
